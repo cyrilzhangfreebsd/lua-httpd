@@ -15,7 +15,7 @@
 -- OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 --
 
-local XAUTHORITY = "/home/yang/.Xauthority"
+local XAUTHORITY = "/usr/home/liveuser/.Xauthority"
 
 local misc = require("misc")
 

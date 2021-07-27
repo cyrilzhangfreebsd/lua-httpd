@@ -1,6 +1,6 @@
 #!/usr/libexec/flua
 
-local SRC_DIR = "/home/yang/src/lua-httpd/"
+local SRC_DIR = "/Applications/lua-httpd/"
 
 local db = require("db")
 
@@ -55,7 +55,6 @@ function main()
 
 	outfile:write(make_write("search "..parsed_db.resolv_search, "/etc/resolv.conf"))
 	outfile:write(make_write("nameserver "..parsed_db.resolv_nameserver, "/etc/resolv.conf"))
-
 end
 
 main()

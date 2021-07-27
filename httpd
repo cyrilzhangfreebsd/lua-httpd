@@ -20,7 +20,7 @@
 -- ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 -- OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-local SRC_DIR = "/home/yang/src/lua-httpd/"
+local SRC_DIR = "/Applications/lua-httpd/"
 
 package.path = SRC_DIR .. "?.lua;" .. package.path
 
@@ -439,6 +439,7 @@ function doInstall(request)
         db.update("packages", req.packages)
 
         db.close()
+        os.execute("cd "..SRC_DIR.." && ./install.lua && sleep 1 && ./bsdinstall-scripted installscript")
 
         return { status=501, reason="Not implemented", body="TODO" }
 end
